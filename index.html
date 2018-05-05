@@ -1,41 +1,137 @@
-<doctype html>
-<html lang="eng-us">
+<!DOCTYPE HTML>
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>Joseph's Classwork Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="reset.css">
+
+    <link rel="stylesheet"  type="text/css" href="bootstrap.css">
+
+    <title>Text Layout</title>
+
+    <style>
+
+        .navigation {
+            background-color: olivedrab;
+            margin: 0; 
+            justify-content: flex-end;
+            display: flex;
+            border-top: none;
+        }
+        
+        .navigation h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 12px;
+            left: 45px;
+        }
+
+        .navigation li {
+            border-right: 1px solid #000;
+            display: inline;
+            list-style: none;
+        }
+
+        .navigation a {
+            text-decoration: none;  
+            padding: 1em;
+            color: white;
+            padding: 10px;
+            /*border-top: 1px solid rgba(255,255,255,0.3); */
+            border: 1px solid rgba(219, 224, 218, 0.719); 
+        }
+
+        [class*="col-"] {
+            width: 100%;
+        }
+
+
+        @media screen and (min-width: 1200){
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+    </style>
 </head>
 
-<body>
-    <h1>Hello, Howdy and Welcome</h1>
-   
+ <body>
 
-<h2>The Links</h2>
+        <nav class="navigation">
+                <h1>Hugh Mann</h1>
+    
+            <ul >
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
 
-<a href="https://en.wikipedia.org/wiki/Tab_(GUI)" target="_blank">New Tab</a>
-<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <h1>Header</h1>
+            </div>
+            <div class="col-xl-3"></div>
+            <div class="col-xl-3"></div>
+            <div class="col-xl-3"></div>
 
-<strong><a href="https://en.wikipedia.org/wiki/HTML">Bold Link</a></strong>
-<br>
+        </div>
+        <div class="row">
+            <div class="col-xl-3">
+                <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+            </div>
+            <div class="col-xl-3">
+                    <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+                </div>
+                <div class="col-xl-3">
+                        <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+                    </div>
+        </div>
 
-<a href="#">Placeholder Link</a>
-<br>
+        <div class="row">
+            <div class="col-xl-2">
+                <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+            </div>
+            <div class="col-xl-2">
+                    <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+            </div>
+            <div class="col-xl-2">
+                    <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+                </div>
+                <div class="col-xl-2">
+                        <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+                    </div>
+                    <div class="col-xl-2">
+                            <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+                    </div>
+                    <div class="col-xl-2">
+                            <p>Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.</p>
+                        </div> 
+        </div>
+        
+        <div class="row">
+            <div class="col-xl-6">
+                    Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.
+            </div>
+            <div class="col-xl-6">
+                    Lorem ipsum dolor sit gangster, consectetuer adipiscing that's the shizzle. Nullizzle mammasay mammasa mamma oo sa velizzle, mah nizzle volutpat, suscipizzle gangsta, pot black, arcu. Pellentesque eget for sure. Sizzle erizzle.
+            </div>
+        </div>
+        
+    </div>
 
-<h3>Cool Bands</h3>
-<ul>
-    <li>Intervals</li>
-    <li>Coaltar of the Deepers</li>
-    <li>Scale the Summit</li>
-    <li>Goatbed</li>
-    <li>Plini</li>
-</ul>
 
-<h3>Secret Family Sandwich Recipe</h3>
-<ol>
-    <li>Get Bread, Mustard, Salami, and Provolone cheese</li>
-    <li>Lay out two slices of bread</li>
-    <li>Spread mustard onto the face up side of each slice</li>
-    <li>On one bread slice, on top of the mustard, layer slices of salami and provolone at a 3:1 ratio, or as desired</li>
-    <li>Place the other bread slice mustard down on top of the layers of salami and cheese</li>
-</ol>
 
-</body>
+ </body>
+ </html>
