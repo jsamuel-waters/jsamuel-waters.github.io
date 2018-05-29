@@ -1,0 +1,32 @@
+body {
+    background-image: url("../images/what-the-hex-dark.png");
+}
+
+h1 {
+    size: 15px;
+}
+
+
+.score-card, .jumbotron, #inst {
+    background-color:rgb(5, 5, 5);
+    color: darkgoldenrod;
+    font-family: monospace;
+}
+
+
+.container {
+    background-color:rgb(5, 5, 5);
+    max-width: 480px;
+    border: double 3px darkgoldenrod;
+}
+
+{
+    background-color: rgb(5, 5, 5);
+    color: darkgoldenrod;
+}
+
+.gem {
+    width: 110px;
+    /* padding: 10px; */
+    margin: 10px 0 10px 5px;
+}
