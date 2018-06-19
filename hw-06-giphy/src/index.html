@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/bootswatch-minty.css">
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <!-- <script src=“https://code.jquery.com/jquery-3.2.1.js”></script> -->
+        <script src="../assets/js/jquery-3.3.1.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+        
+    <link rel="stylesheet" href="../assets/css/bootswatch-minty.css">
 </head>
 <body>
-        <!-- JavaScrpit Files -->
-        <script src="/assets/js/jquery-3.3.1.min.js"></script>
-        <script src="/assets/js/main.js"></script>
-        <!-- End of JavaScript Files -->
+   
     
     <div class="container-fluid">
+        
         <div id="added-buttons"></div>
-
-        <form>
-            <div class="form">
-                <input type="input" class="form-control" id="search-bar" size="10" aria-describedby="search-text" placeholder="Search for anything...">
-                <small id="search-text" class="form-text text-muted">Enter a term, and find the related GIFs</small>
-            </div>
-
-            <button type="button" class="btn btn-primary" id="submit">Submit</button>
-        </form>
-
-        <div id="display-gifs"></div>
+        
+        <div class="row clear-fix">
+            <form>
+                <div class="form col-md-12">
+                    <input type="input" class="form-control" id="search-bar" aria-describedby="search-text" placeholder="Search for anything...">
+                    <small id="search-text" class="form-text text-muted">Enter a term, and find the related GIFs</small>
+                    
+                    <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                    <button type="button" class="btn btn-secondary" id="clear-button">Clear</button>
+                </div>
+            </form>
+            
+            <div id="display-gifs"></div>
+        </div>
     </div>
-
+    
 </body>
 </html>
