@@ -12,7 +12,7 @@ $(document).ready(function(){
     function fmakebutton(term){
         var makeButton = $("<button>");
         // Adding a class
-        makeButton.addClass("btn btn-primary mx-1");
+        makeButton.addClass("btn btn-primary mx-1 search-me");
         // Adding a data-attribute with a value of the search term at index i
         makeButton.attr("data-name", term);
         // Providing the button's text with a value of the search term at index i
@@ -48,8 +48,8 @@ $(document).ready(function(){
     $("#clear-button").click( function(){ 
         localStorage.clear();
         searchArray = JSON.parse(storedData);
-        if 
-        console.log(searchArray);
+        location.reload();
+        
     }); 
     
         
@@ -57,10 +57,9 @@ $(document).ready(function(){
     
 // populate buttons from array
 // loop through the array, creating a button for each item
-$("button").on("click", function() {
-    // Grabbing and storing the data-animal property value from the button
-    var animal = $(this).attr("data-animal");
-    
+$(".search-me").on("click", function() {
+    // Grabbing and storing the data-name property value from the button
+    var searchTerm = $(this).attr("data-name");
     // Constructing a queryURL using the animal name
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       searchTerm + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -82,24 +81,21 @@ $("button").on("click", function() {
         for (var i = 0; i < results.length; i++) {
 
           // Creating and storing a div tag
-          var animalDiv = $("<div>");
-
-          // Creating a paragraph tag with the result item's rating
-          var p = $("<p>").text("Rating: " + results[i].rating);
+          var gifDiv = $("<div>");
 
           // Creating and storing an image tag
-          var animalImage = $("<img>");
+          var newImage = $("<img>");
           // Setting the src attribute of the image to a property pulled off the result item
-          animalImage.attr("src", results[i].images.fixed_height.url);
+          newImage.attr("src", results[i].images.fixed_height.url);
 
-          // Appending the paragraph and image tag to the animalDiv
-          animalDiv.append(p);
-          animalDiv.append(animalImage);
+          // Appending the paragraph and image tag to the gifDiv
+          gifDiv.append(newImage);
 
-          // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-          $("#gifs-appear-here").prepend(animalDiv);
-        }
-      });
+          // Prependng the gifDiv to the HTML page in the "#display-gifs" div
+          $("#display-gifs").prepend(gifDiv);
+        }  
+})
+});
 
 
 
