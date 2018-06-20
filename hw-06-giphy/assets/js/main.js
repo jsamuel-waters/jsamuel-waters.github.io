@@ -19,6 +19,7 @@ $(document).ready(function(){
         makeButton.text(term);
         // Adding the button to the HTML
         $("#added-buttons").append(makeButton);
+        
     } 
 
         for (i = 0; i < searchArray.length; i++){
@@ -39,7 +40,7 @@ $(document).ready(function(){
         
         fmakebutton(searchTerm);
         $("#search-bar").attr("value", "");
-
+        location.reload();
 
     });
     // --[onSumbit]Capture Search Text
@@ -80,19 +81,15 @@ $(".search-me").on("click", function() {
         // Looping through each result item
         for (var i = 0; i < results.length; i++) {
 
-          // Creating and storing a div tag
-          var gifDiv = $("<div>");
 
           // Creating and storing an image tag
           var newImage = $("<img>");
           // Setting the src attribute of the image to a property pulled off the result item
           newImage.attr("src", results[i].images.fixed_height.url);
 
-          // Appending the paragraph and image tag to the gifDiv
-          gifDiv.append(newImage);
 
           // Prependng the gifDiv to the HTML page in the "#display-gifs" div
-          $("#display-gifs").prepend(gifDiv);
+          $("#display-gifs").append(newImage);
         }  
 })
 });
